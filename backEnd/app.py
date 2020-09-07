@@ -13,19 +13,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
 db = SQLAlchemy(app)
 
 
-@app.cli_command('db_create')
 def db_create():
   db.create_all()
   print('DB CREATED')
 
 
-@app.cli_command('db_drop')
-def db_drop():
-  db.drop_all
-  print('DB DROPPED')
+# @app.cli_command('db_drop')
+# def db_drop():
+#   db.drop_all
+#   print('DB DROPPED')
 
 
-@app.cli_command('dp_seed')
 def db_seed():
   user1 = User(
     username='User1',
