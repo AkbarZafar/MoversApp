@@ -148,22 +148,15 @@ class ItemSchema(ma.Schema):
 
 
 user_schema = UserSchema()
-
 boxes_schema = BoxesSchema(many=True)
-
 items_schema = ItemSchema(many=True)
 
 # database creation
-
-
 @app.route('/db_create')
-def create_db():
+def recreate_db():
+    db.drop_all()
     db.create_all()
-    return jsonify(message='database created')
 
-
-@app.route('/db_seed')
-def seed_db():
     user1 = User(
         username='User1',
         email='email@email.com',
@@ -208,13 +201,7 @@ def seed_db():
     db.session.add(bedsheets)
 
     db.session.commit()
-    return jsonify(message='database seeded')
-
-
-@app.route('/db_drop')
-def drop_db():
-    db.drop_all()
-    return jsonify(message='database dropped')
+    return jsonify(message='database created and seeded')
 
 
 if __name__ == "__main__":
