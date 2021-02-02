@@ -192,7 +192,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-flask/dev/1612145420903-2021-02-01T02:10:20.903Z/serverless-flask.zip"
+          "S3Key": "serverless/serverless-flask/dev/1612238883795-2021-02-02T04:08:03.795Z/serverless-flask.zip"
         },
         "Handler": "wsgi_handler.handler",
         "Runtime": "python3.6",
@@ -222,7 +222,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-flask/dev/1612145420903-2021-02-01T02:10:20.903Z/serverless-flask.zip"
+          "S3Key": "serverless/serverless-flask/dev/1612238883795-2021-02-02T04:08:03.795Z/serverless-flask.zip"
         },
         "Handler": "wsgi_handler.handler",
         "Runtime": "python3.6",
@@ -252,7 +252,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/serverless-flask/dev/1612145420903-2021-02-01T02:10:20.903Z/serverless-flask.zip"
+          "S3Key": "serverless/serverless-flask/dev/1612238883795-2021-02-02T04:08:03.795Z/serverless-flask.zip"
         },
         "Handler": "wsgi_handler.handler",
         "Runtime": "python3.6",
@@ -275,34 +275,34 @@
         "CreateUserLogGroup"
       ]
     },
-    "AppLambdaVersionJTNlzUAErkaCwptf7ABil2mH8AJM0ZEgGCFMrytblo": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "AppLambdaFunction"
-        },
-        "CodeSha256": "TCYrv9rAf/d3EgrCAwHIwVAu7F4QhBThRy18AzRl5kg="
-      }
-    },
-    "GetUserLambdaVersiongecnqCfIyXDSmkuX1dI80tm3iJppiJgCiX69Ud3bJ8": {
+    "GetUserLambdaVersionxO0UHpCi7BcI1b92qhUlKmCQ1l9J9xgfW5smqxJmmY": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "GetUserLambdaFunction"
         },
-        "CodeSha256": "TCYrv9rAf/d3EgrCAwHIwVAu7F4QhBThRy18AzRl5kg="
+        "CodeSha256": "erf4UaBGYLjRnHxtxCi4MGPZZA7XikKjvO+XA2JftT8="
       }
     },
-    "CreateUserLambdaVersionA2Hf6QhJaG4rnWXXDJPRu8CDZtdDsujUr0n9EnPU": {
+    "CreateUserLambdaVersionC86unfGncxWLU8gIwKPoB3MghW87oKNpJVY1vQDP0": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "CreateUserLambdaFunction"
         },
-        "CodeSha256": "TCYrv9rAf/d3EgrCAwHIwVAu7F4QhBThRy18AzRl5kg="
+        "CodeSha256": "erf4UaBGYLjRnHxtxCi4MGPZZA7XikKjvO+XA2JftT8="
+      }
+    },
+    "AppLambdaVersionBqcEVBctCT4TMplO8e0TiaPaeXAZEHYXCBsXwBFM": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "AppLambdaFunction"
+        },
+        "CodeSha256": "erf4UaBGYLjRnHxtxCi4MGPZZA7XikKjvO+XA2JftT8="
       }
     },
     "ApiGatewayRestApi": {
@@ -534,7 +534,7 @@
         "MethodResponses": []
       }
     },
-    "ApiGatewayDeployment1612145407601": {
+    "ApiGatewayDeployment1612238868809": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "RestApiId": {
@@ -689,22 +689,22 @@
         "Ref": "ServerlessDeploymentBucket"
       }
     },
-    "AppLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "AppLambdaVersionJTNlzUAErkaCwptf7ABil2mH8AJM0ZEgGCFMrytblo"
-      }
-    },
     "GetUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "GetUserLambdaVersiongecnqCfIyXDSmkuX1dI80tm3iJppiJgCiX69Ud3bJ8"
+        "Ref": "GetUserLambdaVersionxO0UHpCi7BcI1b92qhUlKmCQ1l9J9xgfW5smqxJmmY"
       }
     },
     "CreateUserLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "CreateUserLambdaVersionA2Hf6QhJaG4rnWXXDJPRu8CDZtdDsujUr0n9EnPU"
+        "Ref": "CreateUserLambdaVersionC86unfGncxWLU8gIwKPoB3MghW87oKNpJVY1vQDP0"
+      }
+    },
+    "AppLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "AppLambdaVersionBqcEVBctCT4TMplO8e0TiaPaeXAZEHYXCBsXwBFM"
       }
     },
     "ServiceEndpoint": {

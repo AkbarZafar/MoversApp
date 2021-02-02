@@ -3,7 +3,6 @@ import boto3
 
 from flask import Flask, jsonify, request
 from cryptography.fernet import Fernet
-from validate_email import validate_email
 
 app = Flask(__name__)
 
@@ -68,7 +67,7 @@ def create_user():
     password = request.json.get('password')
     name = request.json.get('name')
 
-    if not password or not email:
+    if not password or not email or not name:
         return jsonify({'error': 'Please provide email and password.'}), 400
 
 
@@ -78,9 +77,11 @@ def create_user():
         Item={
             'email': {'S': email },
             'password': {'B': pass_encrypt },
+            'name': {'S': name}
         }
     )
 
     return jsonify({
         'email': email,
+        'name': name
     })
