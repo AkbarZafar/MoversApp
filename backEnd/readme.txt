@@ -5,3 +5,5 @@ To run locally:
     Start serverless. (sls wsgi serve)
 
 
+To deploy the app:
+    sls deploy
