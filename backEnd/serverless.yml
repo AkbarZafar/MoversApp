@@ -6,7 +6,7 @@ plugins:
   - serverless-dynamodb-local
 
 custom:
-  tableName: 'users-table-${self:provider.stage}'
+  tableName: 'users-table-${self:provider.stage}-1.0'
   wsgi:
     app: app.app
     packRequirements: false
@@ -37,6 +37,7 @@ provider:
   environment:
     USERS_TABLE: ${self:custom.tableName}
 
+
 functions:
   app:
     handler: wsgi.handler
@@ -59,11 +60,11 @@ resources:
       Properties:
         AttributeDefinitions:
           -
-            AttributeName: userId
+            AttributeName: email
             AttributeType: S
         KeySchema:
           -
-            AttributeName: userId
+            AttributeName: email
             KeyType: HASH
         ProvisionedThroughput:
           ReadCapacityUnits: 1

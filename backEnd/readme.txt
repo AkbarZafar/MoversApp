@@ -4,3 +4,4 @@ To run locally:
     Start dynamodb. (sls dynamodb start)
     Start serverless. (sls wsgi serve)
 
+
