@@ -7,7 +7,7 @@ from cryptography.fernet import Fernet
 app = Flask(__name__)
 
 def getCipherSuite():
-    key = (open('../supersecret.txt', 'r')).read()
+    key = (open('supersecret.txt', 'r')).read()
     cipher_suite = Fernet(key)
     return cipher_suite
 
