@@ -1,4 +1,4 @@
 vscode.*
-backEnd/__pycache__.*
+__pycache__/
 supersecret.txt
 backEnd/.serverless/
